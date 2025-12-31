@@ -4,12 +4,13 @@ import { Sparkles } from "lucide-react";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
 
-import FireworksCanvas from "./components/fx/FireworksCanvas";
 import GlassCard from "./components/ui/GlassCard";
 import Hero3D from "./components/three/Hero3D";
 import WishBubbleField from "./components/wishes/WishBubbleField";
 import WishModal from "./components/wishes/WishModal";
 import { fetchWishes, postWish } from "./services/wishesApi";
+
+import FireworksCanvas from "./components/fx/FireworksCanvas";
 
 export default function PremiumNewYearPage() {
     const year = String(new Date().getFullYear() + 1);
@@ -126,7 +127,7 @@ export default function PremiumNewYearPage() {
                         Copy link
                     </button>
                     <a
-                        href="#wish"
+
                         className="rounded-xl bg-gradient-to-r from-fuchsia-500/90 to-cyan-400/90 px-4 py-2 text-sm font-semibold text-black hover:brightness-110 transition"
                     >
                         Write a wish
@@ -160,22 +161,32 @@ export default function PremiumNewYearPage() {
               </span>
                         </motion.h1>
 
-                        <GlassCard className="mt-4 sm:mt-5 p-4 sm:p-5">
-                            <div className="flex items-start justify-between gap-4">
-                                <div>
-                                    <div className="text-xs text-white/60">From</div>
-                                    <div className="text-base font-semibold text-white/90">Deepak Kumar</div>
-                                    <div className="mt-2 text-sm leading-relaxed text-white/75">
-                                        I am wishing all CDAC Patna employees a Happy New Year—may this year bring good health,
-                                        new opportunities, and proud achievements for every team and every individual.
-                                    </div>
-                                </div>
+                        <motion.p
+                            initial={{ opacity: 0, y: 12 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.16, duration: 0.7 }}
+                            className="mt-4 max-w-xl text-pretty text-base leading-relaxed text-white/70"
+                        >
+                            Wishing every colleague a year filled with health, growth, meaningful work, and moments worth celebrating.
+                            Add your message—watch it become a bubble in our live celebration wall.
+                        </motion.p>
 
-                                <div className="hidden sm:block rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/70 backdrop-blur-xl">
-                                    New Year {year}
+                        {/* Replaced the removed 3 cards with a wishing block */}
+                        <div className="mt-8 grid gap-3">
+                            <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 backdrop-blur-xl">
+                                <div className="text-sm font-semibold text-white/90">A wish for the team</div>
+                                <div className="mt-1 text-sm text-white/70">
+                                    May {year} bring steady progress, better collaboration, and proud milestones for everyone at CDAC Patna.
                                 </div>
                             </div>
-                        </GlassCard>
+
+                            <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 backdrop-blur-xl">
+                                <div className="text-sm font-semibold text-white/90">A wish for you</div>
+                                <div className="mt-1 text-sm text-white/70">
+                                    May your days be lighter, your goals clearer, and your efforts always appreciated.
+                                </div>
+                            </div>
+                        </div>
 
                         <p className="mt-4 text-sm sm:text-base leading-relaxed text-white/70">
                             Add your message below and watch it float into the celebration as a bubble. Click any bubble to pop it open.
@@ -188,9 +199,8 @@ export default function PremiumNewYearPage() {
                             >
                                 Copy link
                             </button>
-
                             <a
-                                href="#wall"
+
                                 className="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-white/90 transition"
                             >
                                 View bubble wall
