@@ -82,7 +82,6 @@ export default function PremiumNewYearPage() {
 
     return (
         <div className="min-h-screen bg-[#050612] text-white">
-            {/* Always-on celebration layers */}
             <FireworksCanvas enabled intensity={0.72} />
 
             <Confetti
@@ -97,7 +96,6 @@ export default function PremiumNewYearPage() {
                 colors={["#a855f7", "#60a5fa", "#22d3ee", "#f472b6", "#fde047", "#34d399"]}
             />
 
-            {/* Background */}
             <div className="pointer-events-none fixed inset-0">
                 <motion.div style={{ y: topGlowY }} className="absolute inset-0">
                     <div className="absolute inset-0 bg-[radial-gradient(1200px_700px_at_50%_10%,rgba(168,85,247,0.25),transparent_65%)]" />
@@ -107,7 +105,6 @@ export default function PremiumNewYearPage() {
                 <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(rgba(255,255,255,.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.08)_1px,transparent_1px)] [background-size:64px_64px]" />
             </div>
 
-            {/* Header */}
             <header className="relative z-20 mx-auto flex max-w-6xl items-center justify-between px-4 py-5 sm:px-6 sm:py-6">
                 <div className="flex items-center gap-2">
                     <div className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5 backdrop-blur-xl">
@@ -135,9 +132,7 @@ export default function PremiumNewYearPage() {
                 </div>
             </header>
 
-            {/* Main */}
             <main className="relative z-20 mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20">
-                {/* Hero: stack on mobile, split on large */}
                 <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
                     <div>
                         <motion.div
@@ -157,7 +152,7 @@ export default function PremiumNewYearPage() {
                         >
                             Happy New Year{" "}
                             <span className="bg-gradient-to-r from-fuchsia-200 via-white to-cyan-200 bg-clip-text text-transparent">
-                {year}
+                2026
               </span>
                         </motion.h1>
 
@@ -171,12 +166,11 @@ export default function PremiumNewYearPage() {
                             Add your message—watch it become a bubble in our live celebration wall.
                         </motion.p>
 
-                        {/* Replaced the removed 3 cards with a wishing block */}
                         <div className="mt-8 grid gap-3">
                             <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 backdrop-blur-xl">
                                 <div className="text-sm font-semibold text-white/90">A wish for the team</div>
                                 <div className="mt-1 text-sm text-white/70">
-                                    May {year} bring steady progress, better collaboration, and proud milestones for everyone at CDAC Patna.
+                                    May 2026 bring steady progress, better collaboration, and proud milestones for everyone at CDAC Patna.
                                 </div>
                             </div>
 
@@ -208,7 +202,6 @@ export default function PremiumNewYearPage() {
                         </div>
                     </div>
 
-                    {/* 3D card: responsive height */}
                     <motion.div style={{ y: heroY }}>
                         <motion.div
                             onMouseMove={onHeroMove}
@@ -301,7 +294,7 @@ export default function PremiumNewYearPage() {
                 </section>
 
                 <div className="mt-10 text-center text-xs text-white/35">
-                    CDAC Patna • Happy New Year {year}
+                    CDAC Patna • Happy New Year 2026
                 </div>
             </main>
 

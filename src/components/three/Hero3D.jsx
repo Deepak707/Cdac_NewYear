@@ -16,7 +16,7 @@ export default function Hero3D({ year }) {
 
             <Float speed={1.1} rotationIntensity={0.35} floatIntensity={0.8}>
                 <Text fontSize={1.05} letterSpacing={-0.05} position={[0, 0.25, 0]} anchorX="center" anchorY="middle">
-                    {year}
+                    2026
                     <meshStandardMaterial
                         color="#e9d5ff"
                         emissive="#93c5fd"
