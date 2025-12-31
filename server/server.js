@@ -50,5 +50,7 @@ app.post("/api/wishes", async (req, res) => {
     res.json(wish);
 });
 
+
+
 const PORT = process.env.PORT || 5179;
-app.listen(PORT, () => console.log(`API: http://localhost:${PORT}`));
+app.listen(PORT, () => console.log("Server running on " + PORT));
