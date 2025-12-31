@@ -127,7 +127,7 @@ export default function PremiumNewYearPage() {
                         Copy link
                     </button>
                     <a
-
+                        href="#wish"
                         className="rounded-xl bg-gradient-to-r from-fuchsia-500/90 to-cyan-400/90 px-4 py-2 text-sm font-semibold text-black hover:brightness-110 transition"
                     >
                         Write a wish
@@ -200,7 +200,7 @@ export default function PremiumNewYearPage() {
                                 Copy link
                             </button>
                             <a
-
+                                href="#wall"
                                 className="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-white/90 transition"
                             >
                                 View bubble wall
