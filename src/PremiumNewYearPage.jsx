@@ -294,9 +294,6 @@ export default function PremiumNewYearPage() {
                 <section id="wall" className="mt-10">
                     <div className="mb-3">
                         <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Bubble Wishes</h2>
-                        <p className="mt-1 text-sm text-white/65">
-                            Smooth, premium bubbles with shimmer highlights. Click to pop open.
-                        </p>
                     </div>
 
                     {/* Your refined WishBubbleField should be responsive internally as well */}
